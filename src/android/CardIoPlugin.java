@@ -78,6 +78,8 @@ public class CardIoPlugin extends CordovaPlugin {
 
                 Intent scanIntent = new Intent(cordova.getActivity(), CardIOActivity.class);
                 // customize these values to suit your needs.
+                scanIntent.putExtra(CardIOActivity.EXTRA_USE_CARDIO_LOGO, true); // default: false
+				scanIntent.putExtra(CardIOActivity.EXTRA_HIDE_CARDIO_LOGO, true); // default: false
                 scanIntent.putExtra(CardIOActivity.EXTRA_REQUIRE_EXPIRY, requireExpiry); // default: false
                 scanIntent.putExtra(CardIOActivity.EXTRA_REQUIRE_CVV, requireCvv); // default: false
                 scanIntent.putExtra(CardIOActivity.EXTRA_REQUIRE_POSTAL_CODE, requirePostalCode); // default: false
